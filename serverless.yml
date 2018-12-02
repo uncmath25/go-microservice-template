@@ -1,0 +1,28 @@
+service: go-microservice-template
+
+provider:
+  name: aws
+  runtime: go1.x
+  stage: dev
+  region: us-west-2
+
+app: testing-lab
+tenant: colton
+
+package:
+  exclude:
+  - ./**
+  include:
+  - ./bin/**
+
+functions:
+  lambdahttpserver:
+    handler: bin/run_lambda_server
+    events:
+      - http:
+          path: process_name/{name}
+          method: GET
+          request:
+            parameters:
+              paths:
+                name: true
