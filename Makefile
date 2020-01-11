@@ -2,7 +2,7 @@
 
 clean:
 	@echo "*** Cleaning build artifacts ***"
-	rm -rf ./bin ./vendor Gopkg.lock *.log
+	rm -rf ./bin ./vendor *.log
 
 build: clean
 	@echo "*** Building go binaries with specified dependencies ***"

@@ -30,7 +30,7 @@ func (s *service) ProcessName(ctx context.Context, name string) (*ProcessedName,
 
 	defer level.Info(s.logger).Log("event", "Returning show updates")
 	switch name {
-	case "colton":
+	case "Colton":
 		return &ProcessedName{Name: "Colton", Message: "You the boss!"}, nil
 	default:
 		return &ProcessedName{Name: name, Message: "Youse a poser..."}, nil

@@ -20,10 +20,12 @@ Install both **go** and **dep**
 
 
 ### Local Usage:
-1. Remember to import this repo into your gopath: https://golang.org/doc/code.html
-2. Run ` make build ` to build the binary from the go project
-3. Start the server: `./bin/run_http_server ` and test with a local client GET request
-4. (Example: http://localhost:8080/process_name/gary)
+1. Remember to properly set you GOPATH variable (e.g. add ` export GOPATH="$HOME/go" ` to ~/.bashrc)
+2. Clone this repo using **go get**: ` go get go get github.com/uncmath25/go-microservice-template `
+3. Import and develop this repo under your gopath **$GOPATH/src/github.com/uncmath25/go-microservice-template**
+4. Run ` make build ` to build the binary from the go project
+5. Start the server: `./bin/run_http_server ` and test with a local client GET request
+6. Test the server using curl (or just the browser I suppose...) with the provided stub script *./testing.sh*
 
 
 ### Serverless Deployment:
